@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\oddsidemargin}{-.9in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\headsep}{-.5in}
+\addtolength{\textheight}{1.5in}
+\addtolength{\marginparwidth}{-.75in}
+\newcommand{\m}[1]{\marginpar{[#1]}}
+\usepackage{amssymb,amsmath,bm,graphicx}
+\begin{document}
+
+%%%%%%%%%
+% New section  %
+%%%%%%%%%
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{../plots/Rainfall_eg_28-4-2018.png}
+\end{center}
+\caption{IMERG rainfall between 06:00 and 12:00 on April 28th 2018 with IFS and cGAN forecasts with a 24h lead time.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{../plots/IFS_ensemble_28-4-2018_pt1.png}
+\end{center}
+\caption{IFS forecasts with a 24h lead time of rainfall between 06:00 and 12:00 on April 28th 2018. Ensemble members 1-25.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{../plots/IFS_ensemble_28-4-2018_pt2.png}
+\end{center}
+\caption{IFS forecasts with a 24h lead time of rainfall between 06:00 and 12:00 on April 28th 2018. Ensemble members 26-50.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{../plots/cGAN_ensemble_28-4-2018_pt1.png}
+\end{center}
+\caption{IFS forecasts post-processed by cGAN with a 24h lead time of rainfall between 06:00 and 12:00 on April 28th 2018. Ensemble members 1-25.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{../plots/cGAN_ensemble_28-4-2018_pt2.png}
+\end{center}
+\caption{IFS forecasts post-processed by cGAN with a 24h lead time of rainfall between 06:00 and 12:00 on April 28th 2018. Ensemble members 26-50.}
+\end{figure}
+
+\end{document}

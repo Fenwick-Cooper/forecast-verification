@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\oddsidemargin}{-.9in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\headsep}{-.5in}
+\addtolength{\textheight}{1.5in}
+\addtolength{\marginparwidth}{-.75in}
+\newcommand{\m}[1]{\marginpar{[#1]}}
+\usepackage{amssymb,amsmath,bm,graphicx}
+\begin{document}
+
+%%%%%%%%%
+% New section  %
+%%%%%%%%%
+
+\section{CRPS}
+
+The CRPS is calculated at each location and time and for each forecast. It measures how good the distribution of rainfall is at each location over an ensemble forecast. Lower is better.
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Time of day & IFS & cGAN & Change \\
+\hline
+00:00 - 24:00 & 0.089 & 0.076 & -0.013 \\
+\hline
+00:00 - 06:00 & 0.085 & 0.073 & -0.017 \\
+06:00 - 12:00 & 0.080 & 0.060 & -0.020 \\
+12:00 - 18:00 & 0.099 & 0.090 & -0.009 \\
+18:00 - 24:00 & 0.090 & 0.080 & -0.010 \\
+\hline
+\end{tabular}
+\caption{CRPS (mm/h) averaged over all days (366 forecasts) and the ICPAC region for different times of the day in 2020 for IFS and cGAN. Lower is better.}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Month & IFS & cGAN & Change \\
+\hline
+Jan & 0.104 & 0.088 & -0.016 \\
+Feb &0.094 & 0.081 & -0.013 \\
+Mar & 0.101 & 0.086 & -0.015 \\
+Apr & 0.131 & 0.112 & -0.018 \\
+May & 0.092 & 0.079 & -0.013 \\
+Jun & 0.073 & 0.064 & -0.009 \\
+Jul & 0.084 & 0.072 & -0.012 \\
+Aug & 0.091 & 0.078 & -0.013 \\
+Sep & 0.075 & 0.065 & -0.010 \\
+Oct & 0.071 & 0.060 & -0.011 \\
+Nov & 0.083 & 0.072 & -0.012 \\
+Dec & 0.067 & 0.055 & -0.012 \\
+\hline
+\end{tabular}
+\caption{ICPAC region average of the CRPS (mm/h) for each month of 2020 for IFS and cGAN. Lower is better.}
+\end{table}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{../plots/daily_CRPS_2020.png}
+\end{center}
+\caption{The ICPAC region average of the CRPS for each day. Lower is better.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{../plots/CRPS_2020.png}
+\end{center}
+\caption{The CRPS at each location averaged over all of 2020. Lower is better.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_00.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_06.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_12.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_18.png}
+\end{center}
+\caption{CRPS averaged over all days (366 forecasts) for different times of the day in 2020 for IFS and cGAN. Lower is better.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Jan.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Feb.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Mar.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Apr.png}
+\end{center}
+\caption{CRPS averaged over single months in 2020 for IFS and cGAN. Lower is better.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_May.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Jun.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Jul.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Aug.png}
+\end{center}
+\caption{CRPS averaged over single months in 2020 for IFS and cGAN. Lower is better.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Sep.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Oct.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Nov.png}
+\includegraphics[width=0.75\textwidth]{../plots/CRPS_2020_Dec.png}
+\end{center}
+\caption{CRPS averaged over single months in 2020 for IFS and cGAN. Lower is better.}
+\end{figure}
+
+\end{document}
